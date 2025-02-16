@@ -14,7 +14,7 @@ function App() {
     <>
       <div>
         <Header/>
-        <Main />
+        <MainContent />
       </div>
       <WelcomeMessage />
       <Footer />
