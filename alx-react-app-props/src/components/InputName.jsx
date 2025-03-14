@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
 
 function InputName() {
     const [details, setDetails] = useState({ name: "" });
