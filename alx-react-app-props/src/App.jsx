@@ -7,14 +7,15 @@ import Home from './pages/home';
 import WelcomeMessage from './components/WelcomeMessage'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import MainContent from './components/MainContent'
-import UserProfile from './components/UserProfile'
+import ProfilePage from './ProfilePage';
+import UserContext from './UserContext';
 import Counter from './components/Counter'
 import InputName from './components/InputName'
 import './App.css'
 
 
 function App() {
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
   return (
     <>
@@ -28,8 +29,10 @@ function App() {
       <div>
         <Header />
         <MainContent />
-        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-      </div>
+        <UserContext.Provider value={userData}>
+      <ProfilePage />
+    </UserContext.Provider>
+        </div>
       <WelcomeMessage />
       <Counter />
       <InputName/>
