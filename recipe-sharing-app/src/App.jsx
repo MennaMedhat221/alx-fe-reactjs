@@ -13,6 +13,10 @@ const App = () => {
         <Route path="/recipes/:id" element={<RecipeDetails />} />
       </Routes>
     </BrowserRouter>
+    <SearchBar />
+      <RecipeList />
+      <FavoritesList />
+      <RecommendationsList />
     </div>
     
   
